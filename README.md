@@ -27,11 +27,15 @@
 
 ## Introduction
 
-In this project, **arrays** are used to solve various types of interesting problems. What is an array? An _array_ is a data structure of a collection of elements, each of which is identified by an index. The time complexities of 1D and 2D arrays are defined in the diagram below:
+In this project, we Write a method to remove duplicates from an unsorted linked list.
 
-**Visual description**
+For Example;
 
-![TimeComplexitiesOf1DAnd2DArrays](https://github.com/syedumerahmedcode/arrays/blob/master/src/main/resources/TimeComplexitiesOf1DAnd2DArrays.jpg)
+    linkedList = 1->2->1->3
+    deleteDups(linkedList)
+    //Output
+    1->2->3
+
 
 
 ## Out Of Scope
