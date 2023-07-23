@@ -1,4 +1,4 @@
-package com.umer;
+package com.umer.common;
 
 public class LinkedList {
 	public Node head;
