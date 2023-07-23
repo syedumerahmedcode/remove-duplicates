@@ -1,18 +1,30 @@
 package com.umer;
 
-import com.umer.common.LinkedList;
+import com.umer.base.LinkedList;
+import com.umer.service.DeleteDuplicatesService;
 
 public class Execute {
 	
 	public static void main(String[] args) {
-		LinkedList ll=new LinkedList();
-		ll.createLinkedList(1);
-		ll.insertNode(2);
-		ll.insertNode(3);
-		ll.insertNode(4);
-		ll.insertNode(5);
+		LinkedList linkedList=new LinkedList();
+		linkedList.createLinkedList(1);
+		linkedList.insertNode(2);
+		linkedList.insertNode(3);
+		linkedList.insertNode(2);
+		linkedList.insertNode(4);
+		linkedList.insertNode(4);
+		linkedList.insertNode(4);
+		linkedList.insertNode(5);
+		linkedList.insertNode(4);
 		
-		ll.traversalLinkedList();
+		System.out.println("The current state of the linked list is:");
+		linkedList.traversalLinkedList();
+		
+		DeleteDuplicatesService deleteDuplicatesService=new DeleteDuplicatesService();
+		deleteDuplicatesService.deleteDuplicates(linkedList);
+		
+		System.out.println("The current state of the linked list after deleting duplicates is:");
+		linkedList.traversalLinkedList();
 	}
 
 }
