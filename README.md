@@ -62,7 +62,7 @@ return newArray;
 
 ## Project structure
 
-There are several packages, one for each problem, which contain the solution inside a _Service_ class. These service classes are instantiated and called from _main()_ inside the Execute class which can be found inside _com.umer.main_ package.
+There are in total three packages: one of which is the _service_ which contain the solution inside a _Service_ class. The other one is the _base_ package which contains the infrastructure for creating a linked list, in this case a singly linked list. These service classes are instantiated and called from _main()_ inside the Execute class which can be found inside _com.umer.main_ package.
 
 ## Technologies Used
 
@@ -74,9 +74,9 @@ None.
 
 ## Commands
 
-In order to run the program, one needs to open the project in a suitable IDE(such as Eclipse, STS, VSCode 0or IntelliJ), navigate to the Execute class inside com.umer.main package. Once there, right click---> Run As ---> Java Application.
+In order to run the program, one needs to open the project in a suitable IDE(such as Eclipse, STS, VSCode or IntelliJ), navigate to the Execute class inside com.umer.main package. Once there, right click---> Run As ---> Java Application.
 
-The program is written in such a way that most of the service currently uses hard-coded values and it does not take any input from the user(apart from the _AverageTemperatureService_). However, one can go inside the main() inside Execute class and change the input parameters as one sees fit.
+The program is written in such a way that the service currently uses hard-coded values and it does not take any input from the user. However, one can go inside the main() inside Execute class and change the input parameters as one sees fit.
 
 ## Contribution
 

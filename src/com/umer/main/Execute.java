@@ -1,4 +1,4 @@
-package com.umer;
+package com.umer.main;
 
 import com.umer.base.LinkedList;
 import com.umer.service.DeleteDuplicatesService;
