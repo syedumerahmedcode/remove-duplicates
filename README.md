@@ -33,7 +33,7 @@ Since this is an beginner project in which the focus is just to learn some basic
 
 ## Removing Duplicates
 
-We write a service called _DuplicateNumberRemovalService_ which, when given an array, removes duplicate numbers from the input array. A key assumption here is that input array is in sorted order. For example:
+We write a service called _DuplicateNumberRemovalService_ which, when given an unsorted linked list, removes duplicate numbers from the input. For example:
 
 ```text
 removeDuplicates({1, 1, 2, 2, 3, 4, 5}) ---> Output : [1, 2, 3, 4, 5]
@@ -41,22 +41,36 @@ removeDuplicates({1, 1, 2, 2, 3, 4, 5}) ---> Output : [1, 2, 3, 4, 5]
 
 Let's have a look at this is done, shall we? 
 
-Initially, we call **public int[] removeDuplicatesForSortedElements(int[] sortedInputArray)**. Inside this method, we call **removeDuplicates(sortedInputArray, sortedInputArray.length)** which contains the heart of the logic(described in detail soon).
+Initially, we call **deleteDuplicates()** which  takes a linked list as input. Here,we define a _HashSet_ and we start with the _head_ of the linked list as the _currentNode_, previous node is set to _null_ and we iterate through the linked list as long as _current != null_. 
+
+Inside the while loop, we get the value of the _currentNode_ and check if the _hashset_  contains the value already. 
+
+If yes, we set _prev.next = current.next;_ and proceed further.
+
+If the value does not exist in the _hashset_, we add it to the hashset and we set _prev = current;_
+
+After both conditions, _current_ node is always set to _current.next_.
+
+The java code is as follows:
 
 ```java
-int result = removeDuplicates(sortedInputArray, sortedInputArray.length);
-```
-
-Once we get back the result(which is essentially the number of unique elements in the array), we iterate through the initial array till the number of distinct elements and return the new (shortened) array.  
-
-```java
-int[] newArray = new int[result];
-// Here, we loop through input array again but we only go till the length as
-// indicated by the place holder from the helper method.
-for (int i = 0; i < result; i++) {
-	newArray[i] = sortedInputArray[i];
+public void deleteDuplicates(LinkedList linkedList) {
+	HashSet<Integer> hs = new HashSet<Integer>();
+	Node current = linkedList.head;
+	Node prev = null;
+	while (current != null) {
+		int currentValue = current.value;
+		if (hs.contains(currentValue)) {
+			// delete this node from the linked list
+			prev.next = current.next;
+			linkedList.size--;
+		} else {
+			hs.add(currentValue);
+			prev = current;
+		}
+		current = current.next;
+	}
 }
-return newArray;
 ```
 
 
