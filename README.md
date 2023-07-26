@@ -1,4 +1,4 @@
-# arrays
+# Removing duplicates from an unsorted linked list
 
 ## Table of content
 
