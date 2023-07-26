@@ -73,6 +73,9 @@ public void deleteDuplicates(LinkedList linkedList) {
 }
 ```
 
+**Visual description of pseudo code**
+
+![RemoveDuplicatesFromAnUnsortedLinkedList](https://github.com/syedumerahmedcode/remove-duplicates/blob/master/src/main/resources/RemoveDuplicatesFromAnUnsortedLinkedList.jpg)
 
 ## Project structure
 
