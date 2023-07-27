@@ -1,4 +1,4 @@
-# Removing duplicates from an unsorted linked list
+# Removing duplicates from an unsorted linked lis
 
 ## Table of content
 
@@ -15,7 +15,7 @@
 
 ## Introduction
 
-In this project, we Write a method to remove duplicates from an unsorted linked list.
+In this project, we write a method to remove duplicates from an unsorted linked list.
 
 For Example;
 
