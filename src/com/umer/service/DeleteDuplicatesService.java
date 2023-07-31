@@ -14,7 +14,7 @@ public class DeleteDuplicatesService {
 		while (current != null) {
 			int currentValue = current.value;
 			if (hs.contains(currentValue)) {
-				// delete this node from the linkedl list
+				// delete this node from the linked list
 				prev.next = current.next;
 				linkedList.size--;
 			} else {

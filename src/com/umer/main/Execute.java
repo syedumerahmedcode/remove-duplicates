@@ -14,6 +14,7 @@ public class Execute {
 		linkedList.insertNode(4);
 		linkedList.insertNode(4);
 		linkedList.insertNode(4);
+		linkedList.insertNode(1);
 		linkedList.insertNode(5);
 		linkedList.insertNode(4);
 		
